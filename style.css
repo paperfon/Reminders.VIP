@@ -1,0 +1,45 @@
+﻿/*input:invalid + span:after {
+    content: '✖';
+    padding-left: 5px;
+}
+
+input:valid + span:after {
+    content: '✓';
+    padding-left: 5px;
+}*/
+
+label {
+    text-align: center;
+    min-width: 120px;
+}
+
+input {
+    min-width: 120px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 5px auto;
+}
+
+button {
+    min-width: 120px;
+    margin: 10px auto;
+    border-radius: 3px;
+    background-color: black;
+    color: antiquewhite;
+}
+
+ul {
+    list-style-type: none;
+}
+
+svg {
+    width: 64px;
+    height: 64px;
+}
+
+.delete-item::after {
+    content: '✖';
+    color: red;
+}
+
