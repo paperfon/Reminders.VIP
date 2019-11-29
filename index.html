@@ -32,9 +32,9 @@
     <section class="container-fluid text-center my-5">
         <form id="addItemForm" onsubmit="return false">
             <label for="addItem">Add an item:</label>
-            <input id="addItem" type="text" name="addItem" minlength="1" placeholder="Buy coliflower"><br>
+            <input id="addItem" type="text" name="addItem" minlength="1" placeholder="E.g. Get cash"><br>
             
-            <button onclick="addItemToList()">Add the item</button>
+            <button class="submit" onclick="addItemToList()">Add the item</button>
         </form>
     </section>
 
@@ -43,7 +43,8 @@
         <ul id="listItems"></ul>
         <form onsubmit="return false">
 
-            <button onclick="deleteList()">Delete the list</button>
+            <button class="submit" onclick="deleteList()">Delete the list</button>
+            <button class="submit" onclick="show()">Load</button>
         </form>
     </section>
 

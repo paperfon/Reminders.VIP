@@ -13,7 +13,7 @@ label {
     min-width: 120px;
 }
 
-input {
+form input {
     min-width: 120px;
     text-align: center;
     border: 1px solid black;
@@ -21,7 +21,7 @@ input {
     margin: 5px auto;
 }
 
-button {
+button.submit {
     min-width: 120px;
     margin: 10px auto;
     border-radius: 3px;
@@ -33,13 +33,24 @@ ul {
     list-style-type: none;
 }
 
-svg {
-    width: 64px;
-    height: 64px;
+/*.delete-item::before {
+    content: '✖';
+}*/
+
+button.delete-item {
+    border: 1px solid red;
+    background: none;
+    color: red;
+    font-size: 0.85rem;
 }
 
-.delete-item::after {
-    content: '✖';
-    color: red;
+.itemDone {
+    text-decoration: line-through;
+    background: whitesmoke;
+    color: gray;
+}
+
+input[type=checkbox] {
+    vertical-align: middle;
 }
 
