@@ -12,24 +12,24 @@
     <link href="style.css" rel="stylesheet" />
     <script src="reminders.js"></script>
 
-    <title>RemindMe App!</title>
+    <title>Reminders VIP!</title>
 </head>
 
 <body onLoad="javascript:show()">
-    <header class="container-fluid my-4 px-5">
+    <header class="container-fluid my-5 px-5">
         <div class="row align-items-center">
             <div class="col-sm text-center flex-column flex-column flex-sm-row pr-sm-5">
-                <h1>RemindMe App!</h1>
+                <h1>Reminders VIP!</h1>
             </div>
 
             <nav class="col-sm text-center flex-column flex-column flex-sm-row justify-content-center">
                 <span>A little web app that helps you create lists and remind you on the items that need to be done</span>
             </nav>
-
         </div>
     </header>
 
     <section class="container-fluid text-center my-5">
+        <hr>
         <form id="addItemForm" onsubmit="return false">
             <label for="addItem">Add an item:</label>
             <input id="addItem" type="text" name="addItem" minlength="1" placeholder="E.g. Get cash"><br>
@@ -42,17 +42,16 @@
         <p>The items on the list appear below!</p>
         <ul id="listItems"></ul>
         <form onsubmit="return false">
-
             <button class="submit" onclick="deleteList()">Delete the list</button>
-            <button class="submit" onclick="show()">Load</button>
         </form>
+        <span onclick="deleteList()">Delete the list</span>
     </section>
 
-    <div class="container-fluid my-3">
-        <footer class="text-center">
-            <p>&copy; 2019 | Created by <a href="https://github.com/paperfon/">Rod</a></p>
-        </footer>
-    </div>
+    <footer class="container-fluid text-center text-muted my-3">
+        <hr>
+        <small>We use Google Analytics in an anonymized form for statistics and local storage for saving your reminders only to your browser so you don't lose them when you refresh the page. No personal data is stored, transferred or sold in any manner. By using this little web app you acknowledge to these terms. :)</small>
+        <p><small>&copy; 2020 | Crafted with care at <a href="https://github.com/paperfon/">Paperfon</a></small></p>
+    </footer>
 
 </body>
 
