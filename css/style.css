@@ -1,0 +1,31 @@
+﻿body {
+    font-size: 2rem;
+    background-color: #0532ff1a;
+}
+
+.form-control,
+.btn {
+    font-size: 2rem;
+}
+
+.list-group {
+    border: none;
+}
+
+.item-content {
+    display: inline-block;
+    padding: .375rem .75rem;
+}
+
+.itemDone {
+    background: darkgray !important;
+    color: gray;
+}
+
+.itemDone .item-content {
+    text-decoration: line-through;
+}
+
+small {
+    font-size: 1rem;
+}

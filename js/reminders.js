@@ -33,33 +33,16 @@ function addItemToList() {
 }
 
 function appendOutput(item) {
-    //var newLi = document.createElement('li');
-    //newLi.setAttribute("id", value.replace(/\s+/g, ''));
-    //newLi.setAttribute("onclick", "removeItemFromList(this)");
-    //newLi.appendChild(document.createTextNode(value));
-    //listItems.append(newLi);
-
-    // Create a new HTML element and append it to the DOM
-
-    //<input id="${item.id}" type="checkbox" />
-    //<label for="${item.id}" class="checked"></label>
 
     const listItems = document.getElementById("listItems");
 
     listItems.insertAdjacentHTML('beforeend', `
-        <li class="reminder-item" id="${item.id}">
-            
-                <input type="checkbox" onclick="toggleItemDone(this)"/>
-                <span onclick="toggleItemDone(this)">${item.content}</span>
-                <button class="delete-item" onclick="removeItemFromList(${item.id})">Delete</button>
-            
+        <li class="list-group-item" id="${item.id}" onclick="toggleItemDone(this)">
+            <span class="item-content">${item.content}</span>
+            <button class="btn btn-outline-warning float-right" onclick="removeItemFromList(${item.id})">Delete</button>
         </li>
             `);
 }
-
-// Listener in the items list
-//const ulList = document.getElementById("listItems");
-//ulList.addEventListener("click", removeItemFromList, false);
 
 // Remove an item from the list
 function removeItemFromList(id) {
@@ -93,7 +76,7 @@ function deleteList() {
 
 // Class toggler for the element
 function toggleItemDone(elem) {
-    elem.parentElement.classList.toggle("itemDone");
+    elem.classList.toggle("itemDone");
 }
 
  //Show the existing items from localStorage
